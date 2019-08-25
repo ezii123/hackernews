@@ -49,16 +49,16 @@ class PostsController < ApplicationController
     end
   end
   
-  def destroy
-    @post
-    if current_user.admin?
-      @post.destroy 
-      redirect_to :action => "index"
-    else
-      current_user.posts.find(@post).destroy
-      redirect_to :action => "index"
-    end
-  end
+  # def destroy
+  #   @post
+  #   if current_user.admin?
+  #     @post.destroy 
+  #     redirect_to :action => "index"
+  #   else
+  #     current_user.posts.find(@post).destroy
+  #     redirect_to :action => "index"
+  #   end
+  # end
   
   private
   
